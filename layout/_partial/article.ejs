@@ -18,6 +18,13 @@
         <%- post.content %>
       <% } %>
 
+      <div class="bookicon"></div>
+                 <div class="article-hit">
+                   <span id="busuanzi_container_page_pv">
+                         热度 <span id="busuanzi_value_page_pv"></span>℃</span>
+      </div>
+
+
       <% if ((theme.reward_type === 2 || (theme.reward_type === 1 && post.reward)) && !index){ %>
         <div class="page-reward">
           <a href="javascript:;" class="page-reward-btn tooltip-top">
@@ -87,7 +94,7 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
-  
+
   <% if (theme.wangyiyun){ %>
   <%- partial('post/wangyiyun', {
       key: post.slug,
